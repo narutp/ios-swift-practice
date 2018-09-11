@@ -20,11 +20,11 @@ class MainTabBarController: UITabBarController {
     func initializeTab() {
         let videoController = UINavigationController(rootViewController: VideoViewController())
         videoController.tabBarItem.image = UIImage(named: "video_black")
-        videoController.tabBarItem.selectedImage = UIImage(named: "video_white")
+        videoController.tabBarItem.selectedImage = UIImage(named: "video_white")?.withRenderingMode(.alwaysOriginal)
         
         let favouriteController = UINavigationController(rootViewController: FavouriteViewController())
         favouriteController.tabBarItem.image = UIImage(named: "star_black")
-        favouriteController.tabBarItem.selectedImage = UIImage(named: "star_white")
+        favouriteController.tabBarItem.selectedImage = UIImage(named: "star_white")?.withRenderingMode(.alwaysOriginal)
         
         self.viewControllers = [videoController, favouriteController]
     }
