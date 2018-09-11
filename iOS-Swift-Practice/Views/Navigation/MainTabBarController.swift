@@ -27,6 +27,16 @@ class MainTabBarController: UITabBarController {
         favouriteController.tabBarItem.selectedImage = UIImage(named: "star_white")?.withRenderingMode(.alwaysOriginal)
         
         self.viewControllers = [videoController, favouriteController]
+        
+        guard let items = tabBar.items else { return }
+        
+        for item in items {
+            item.imageInsets = UIEdgeInsetsMake(4, 0, -4, 0)
+        }
+        
+//        for item in tabBar.items {
+//            item.imageInsets.....
+//        }
     }
 }
 
