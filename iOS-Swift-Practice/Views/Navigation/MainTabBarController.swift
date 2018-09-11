@@ -12,19 +12,15 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         self.tabBar.barTintColor = UIColor.clear
         self.initializeTab()
     }
     
     func initializeTab() {
-        let videoController = UINavigationController(rootViewController: VideoViewController())
-        videoController.tabBarItem.image = UIImage(named: "video_black")
-        videoController.tabBarItem.selectedImage = UIImage(named: "video_white")?.withRenderingMode(.alwaysOriginal)
-        
-        let favouriteController = UINavigationController(rootViewController: FavouriteViewController())
-        favouriteController.tabBarItem.image = UIImage(named: "star_black")
-        favouriteController.tabBarItem.selectedImage = UIImage(named: "star_white")?.withRenderingMode(.alwaysOriginal)
+        // createNavController extension
+        let videoController = createNavController(VideoViewController(), #imageLiteral(resourceName: "video_black"), #imageLiteral(resourceName: "video_white"))
+        let favouriteController = createNavController(FavouriteViewController(), #imageLiteral(resourceName: "star_black"), #imageLiteral(resourceName: "star_white"))
         
         self.viewControllers = [videoController, favouriteController]
         
