@@ -97,8 +97,8 @@
 		6C6F3B302147994D00A26FB9 /* iOS-Swift-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				6C6F3B5F21479F4000A26FB9 /* View */,
 				6C6F3B312147994D00A26FB9 /* AppDelegate.swift */,
-				6C6F3B332147994D00A26FB9 /* ViewController.swift */,
 				6C6F3B352147994D00A26FB9 /* Main.storyboard */,
 				6C6F3B382147995100A26FB9 /* Assets.xcassets */,
 				6C6F3B3A2147995100A26FB9 /* LaunchScreen.storyboard */,
@@ -123,6 +123,22 @@
 				6C6F3B532147995100A26FB9 /* Info.plist */,
 			);
 			path = "iOS-Swift-PracticeUITests";
+			sourceTree = "<group>";
+		};
+		6C6F3B5F21479F4000A26FB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C6F3B6021479F4A00A26FB9 /* Navigation */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C6F3B6021479F4A00A26FB9 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6C6F3B332147994D00A26FB9 /* ViewController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
