@@ -14,7 +14,7 @@ extension UITabBarController {
         // create each tab controller
         let tabController = UINavigationController(rootViewController: vc)
         tabController.tabBarItem.image = img
-        tabController.tabBarItem.selectedImage = selectedImg
+        tabController.tabBarItem.selectedImage = selectedImg.withRenderingMode(.alwaysOriginal)
         
         return tabController
     }
