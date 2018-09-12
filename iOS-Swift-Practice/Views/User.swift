@@ -9,8 +9,9 @@
 import UIKit
 
 class User {
-    var name: String?
-    var userProfile: UserProfile?
+    private var name: String?
+    private var userProfile: UserProfile?
+    
     init(_ name: String, _ userProfile: UserProfile) {
         self.name = name
         self.userProfile = userProfile

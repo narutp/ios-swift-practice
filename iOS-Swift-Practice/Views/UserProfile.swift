@@ -9,8 +9,9 @@
 import UIKit
 
 class UserProfile {
-    var first: String?
-    var last: String?
+    private var first: String?
+    private var last: String?
+    
     init(_ first: String, _ last: String) {
         self.first = first
         self.last = last

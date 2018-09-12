@@ -151,8 +151,6 @@
 				6C6F3B612147A3D500A26FB9 /* Modules */,
 				6C6F3B5F21479F4000A26FB9 /* Views */,
 				6C6F3B312147994D00A26FB9 /* AppDelegate.swift */,
-				6C9CD63C214904CF0018F5F8 /* UserProfile.swift */,
-				6C9CD63A214904940018F5F8 /* User.swift */,
 				6C6F3B352147994D00A26FB9 /* Main.storyboard */,
 				6C6F3B382147995100A26FB9 /* Assets.xcassets */,
 				6C6F3B3A2147995100A26FB9 /* LaunchScreen.storyboard */,
@@ -182,6 +180,8 @@
 		6C6F3B5F21479F4000A26FB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6C9CD63C214904CF0018F5F8 /* UserProfile.swift */,
+				6C9CD63A214904940018F5F8 /* User.swift */,
 				6C6F3B6021479F4A00A26FB9 /* Navigation */,
 			);
 			path = Views;
