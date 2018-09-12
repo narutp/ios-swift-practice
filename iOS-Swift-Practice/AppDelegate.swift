@@ -18,6 +18,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         self.showMainScreen()
+        
+//        let numberAsString: String = "123"
+//        let convertNumber: Int? = Int(numberAsString)
+//        print("number: \(convertNumber!)")
+        
+//        let number: Int?
+//        number = 5
+//        let user = User("A", UserProfile("AB", "BA"))
+//        print("user: \(user)")
+//        if let number: Int = Int(number) {
+//            print("number: \(number!)")
+//        }
+        let firstName: String? = "Narut"
+        let lastName: String? = "Poovorakit"
+        var fullName: String? = ""
+        
+        if let firstName = firstName, let lastName = lastName {
+            fullName = firstName + " " + lastName
+            
+            print("first name + last name \(fullName!)")
+        }
+        
         return true
     }
 
