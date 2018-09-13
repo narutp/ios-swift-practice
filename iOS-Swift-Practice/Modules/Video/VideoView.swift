@@ -7,16 +7,33 @@
 //
 
 import UIKit
+import PureLayout
 
 class VideoView: UIViewController {
     
     var presenter: VideoPresenterProtocol?
+    private let videoDetailBtn = UIButton(type: .infoDark)
+    private let videoDetailTxt = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
         
+        view.backgroundColor = UIColor.white
         navigationItem.title = "Videos"
+        
+        view.addSubview(videoDetailBtn)
+        view.addSubview(videoDetailTxt)
+        
+        // SETUP Text
+        videoDetailTxt.text = "This is label"
+        
+        // SETUP Button
+        videoDetailBtn.setTitle("Detail", for: .normal)
+        
+        // LAYOUT
+        videoDetailBtn.autoPinEdge(toSuperviewEdge: .left)
+        videoDetailBtn.autoPinEdge(toSuperviewEdge: .right)
+        videoDetailBtn.autoCenterInSuperview()
     }
 }
 

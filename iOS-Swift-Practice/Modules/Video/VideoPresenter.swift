@@ -9,6 +9,7 @@
 import UIKit
 
 class VideoPresenter: VideoPresenterProtocol {
+    
     var view: VideoViewProtocol?
     
     var interactor: VideoInteractorProtocol?
@@ -17,5 +18,9 @@ class VideoPresenter: VideoPresenterProtocol {
     
     func loadData() {
         
+    }
+    
+    func goToVideoDetail() {
+        wireframe?.pushVideoDetail(view: view!)
     }
 }

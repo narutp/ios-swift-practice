@@ -21,6 +21,7 @@ protocol VideoPresenterProtocol: class {
     var wireframe: VideoWireframeProtocol? { get set }
     
     func loadData()
+    func goToVideoDetail()
 }
 
 protocol VideoInteractorProtocol: class {
@@ -29,4 +30,5 @@ protocol VideoInteractorProtocol: class {
 
 protocol VideoWireframeProtocol: class {
     static func createVideoModule() -> UIViewController
+    func pushVideoDetail(view: VideoViewProtocol)
 }

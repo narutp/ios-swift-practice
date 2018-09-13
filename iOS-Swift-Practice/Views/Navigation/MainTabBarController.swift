@@ -19,7 +19,7 @@ class MainTabBarController: UITabBarController {
     
     func initializeTab() {
         // createNavController extension
-        let videoController = createNavController(VideoViewController(), #imageLiteral(resourceName: "video_black"), #imageLiteral(resourceName: "video_white"))
+        let videoController = createNavController(VideoView(), #imageLiteral(resourceName: "video_black"), #imageLiteral(resourceName: "video_white"))
         let favouriteController = createNavController(FavouriteViewController(), #imageLiteral(resourceName: "star_black"), #imageLiteral(resourceName: "star_white"))
         
         self.viewControllers = [videoController, favouriteController]
