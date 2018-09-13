@@ -21,6 +21,7 @@
 		6C6F3B6C2147BD0300A26FB9 /* UITabBarController+viewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F3B6B2147BD0300A26FB9 /* UITabBarController+viewController.swift */; };
 		6C9CD63B214904940018F5F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63A214904940018F5F8 /* User.swift */; };
 		6C9CD63D214904CF0018F5F8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63C214904CF0018F5F8 /* UserProfile.swift */; };
+		6C9CD63F214A3BFA0018F5F8 /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63E214A3BFA0018F5F8 /* VideoDetailsViewController.swift */; };
 		6EA27580F0EE6449F6B91D36 /* Pods_iOS_Swift_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52DB2A100D1B00B34ED9859 /* Pods_iOS_Swift_Practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		6C6F3B6B2147BD0300A26FB9 /* UITabBarController+viewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+viewController.swift"; sourceTree = "<group>"; };
 		6C9CD63A214904940018F5F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6C9CD63C214904CF0018F5F8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		6C9CD63E214A3BFA0018F5F8 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
 		7969D232995F29E1368CE68D /* Pods-iOS-Swift-PracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Swift-PracticeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Swift-PracticeUITests/Pods-iOS-Swift-PracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		997B28BD215836E7A64DBAE5 /* Pods_iOS_Swift_PracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Swift_PracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AC1518051179229895CF7F /* Pods-iOS-Swift-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Swift-Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Swift-Practice/Pods-iOS-Swift-Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		6C6F3B622147A3EC00A26FB9 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				6C9CD640214A3C050018F5F8 /* Subviews */,
 				6C6F3B632147A41400A26FB9 /* VideoViewController.swift */,
 			);
 			path = Video;
@@ -226,6 +229,14 @@
 				6C6F3B6B2147BD0300A26FB9 /* UITabBarController+viewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6C9CD640214A3C050018F5F8 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				6C9CD63E214A3BFA0018F5F8 /* VideoDetailsViewController.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +455,7 @@
 				6C9CD63B214904940018F5F8 /* User.swift in Sources */,
 				6C6F3B322147994D00A26FB9 /* AppDelegate.swift in Sources */,
 				6C6F3B642147A41400A26FB9 /* VideoViewController.swift in Sources */,
+				6C9CD63F214A3BFA0018F5F8 /* VideoDetailsViewController.swift in Sources */,
 				6C6F3B6C2147BD0300A26FB9 /* UITabBarController+viewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

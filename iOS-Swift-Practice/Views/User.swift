@@ -16,4 +16,12 @@ class User {
         self.name = name
         self.userProfile = userProfile
     }
+    
+    public func getName() -> String? {
+        return self.name
+    }
+    
+    public func setName(_ name: String) {
+        self.name = name
+    }
 }

@@ -13,14 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         self.showMainScreen()
     
         let user = User("A", UserProfile("AB", "BA"))
-        print("user: \(user)")
+        if let user = user.getName() {
+            print("user: \(user)")
+        }
         
         let firstName: String? = "Narut"
         let lastName: String? = "Poovorakit"
