@@ -31,8 +31,14 @@ class VideoView: UIViewController {
         videoDetailBtn.setTitle("Detail", for: .normal)
         
         // LAYOUT
-        videoDetailBtn.autoPinEdge(toSuperviewEdge: .left)
-        videoDetailBtn.autoPinEdge(toSuperviewEdge: .right)
+//        videoDetailTxt.autoPinEdge(toSuperViewEdge: .top)
+        videoDetailTxt.autoPinEdge(toSuperviewEdge: .left)
+        videoDetailTxt.autoPinEdge(toSuperviewEdge: .right)
+        videoDetailTxt.autoAlignAxis(toSuperviewAxis: .vertical)
+        videoDetailBtn.autoPinEdge(.top, to: .bottom, of: videoDetailTxt, withOffset: 20)
+        videoDetailBtn.autoAlignAxis(toSuperviewAxis: .vertical)
+        videoDetailBtn.autoPinEdge(toSuperviewEdge: .bottom)
+        videoDetailTxt.autoCenterInSuperview()
         videoDetailBtn.autoCenterInSuperview()
     }
 }
