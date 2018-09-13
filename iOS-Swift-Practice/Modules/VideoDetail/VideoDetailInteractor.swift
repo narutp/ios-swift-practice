@@ -1,5 +1,5 @@
 //
-//  VideoDetailsViewController.swift
+//  VideoDetailInteractor.swift
 //  iOS-Swift-Practice
 //
 //  Created by Narut Poovorakit on 13/9/2561 BE.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoDetailsViewController: UIViewController {
+class VideoDetailInteractor: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
