@@ -8,12 +8,25 @@
 
 import UIKit
 
-class VideoViewController: UIViewController {
-
+class VideoView: UIViewController {
+    
+    var presenter: VideoPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         
         navigationItem.title = "Videos"
+    }
+}
+
+extension VideoView: VideoViewProtocol {
+    
+    func didLoadData() {
+        
+    }
+    
+    func beginUpdateUser() {
+        
     }
 }
