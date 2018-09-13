@@ -8,28 +8,26 @@
 
 import UIKit
 
-class VideoDetailProtocol: UIViewController {
+protocol VideoDetailWireframeProtocol: class {
+    static func createVideoDetailModule() -> UIViewController
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+protocol VideoDetailViewProtocol: class {
+    var presenter: VideoDetailPresenterProtocol? { get set }
     
+    func didLoadData()
+    func beginUpdateUser()
+}
 
-    /*
-    // MARK: - Navigation
+protocol VideoDetailPresenterProtocol: class {
+    var view: VideoDetailViewProtocol? { get set }
+    var interactor: VideoDetailInteractorProtocol? { get set }
+    var wireframe: VideoDetailWireframeProtocol? { get set }
+    
+    func loadData()
+    func updateUser(displayName: String, description: String)
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+protocol VideoDetailInteractorProtocol: class {
+    func fetchCurrentVideo()
 }
