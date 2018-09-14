@@ -21,8 +21,8 @@ class VideoView: UIViewController {
         view.backgroundColor = UIColor.white
         navigationItem.title = "Videos"
         
-        view.addSubview(videoDetailBtn)
         view.addSubview(videoDetailTxt)
+        view.addSubview(videoDetailBtn)
         
         // SETUP Text
         videoDetailTxt.text = "This is label"
@@ -32,14 +32,26 @@ class VideoView: UIViewController {
         
         // LAYOUT
 //        videoDetailTxt.autoPinEdge(toSuperViewEdge: .top)
+        
+        videoDetailTxt.autoCenterInSuperview()
         videoDetailTxt.autoPinEdge(toSuperviewEdge: .left)
         videoDetailTxt.autoPinEdge(toSuperviewEdge: .right)
         videoDetailTxt.autoAlignAxis(toSuperviewAxis: .vertical)
+        
         videoDetailBtn.autoPinEdge(.top, to: .bottom, of: videoDetailTxt, withOffset: 20)
         videoDetailBtn.autoAlignAxis(toSuperviewAxis: .vertical)
         videoDetailBtn.autoPinEdge(toSuperviewEdge: .bottom)
-        videoDetailTxt.autoCenterInSuperview()
         videoDetailBtn.autoCenterInSuperview()
+        
+        // Listener
+        videoDetailBtn.addTarget(self, action: #selector(clickVideoDetail), for: .touchUpInside)
+    }
+}
+
+extension VideoView {
+    @objc func clickVideoDetail() {
+        print("in")
+        presenter?.goToVideoDetail()
     }
 }
 
