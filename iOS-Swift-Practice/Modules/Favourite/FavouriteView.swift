@@ -8,11 +8,17 @@
 
 import UIKit
 
-class FavouriteViewController: UIViewController {
+class FavouriteView: UIViewController {
 
+    var presenter: FavouritePresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         navigationItem.title = "Favourites"
     }
+}
+
+extension FavouriteView: FavouriteViewProtocol {
+    
 }
