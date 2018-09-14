@@ -11,11 +11,27 @@ import UIKit
 class FavouriteView: UIViewController {
 
     var presenter: FavouritePresenterProtocol?
+    private let videoDetailBtn = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         navigationItem.title = "Favourites"
+        
+        self.view.addSubview(videoDetailBtn)
+        videoDetailBtn.setTitle("Detail", for: .normal)
+        
+        videoDetailBtn.autoCenterInSuperview()
+        videoDetailBtn.autoPinEdge(toSuperviewEdge: .left)
+        videoDetailBtn.autoPinEdge(toSuperviewEdge: .right)
+        
+        videoDetailBtn.addTarget(self, action: #selector(clickVideoDetailBtn), for: .touchUpInside)
+    }
+}
+
+extension FavouriteView {
+    @objc func clickVideoDetailBtn() {
+        presenter?.goToVideoDetail()
     }
 }
 

@@ -18,7 +18,7 @@ protocol FavouritePresenterProtocol: class {
     var wireframe: FavouriteWireframeProtocol? { get set }
     
     func loadData()
-    func goToFavouriteDetail()
+    func goToVideoDetail()
 }
 
 protocol FavouriteInteractorProtocol: class {

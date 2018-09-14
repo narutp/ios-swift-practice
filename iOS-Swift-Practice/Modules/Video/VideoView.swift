@@ -12,7 +12,7 @@ import PureLayout
 class VideoView: UIViewController {
     
     var presenter: VideoPresenterProtocol?
-    private let videoDetailBtn = UIButton(type: .infoDark)
+    private let videoDetailBtn = UIButton(type: .system)
     private let videoDetailTxt = UILabel()
     
     override func viewDidLoad() {

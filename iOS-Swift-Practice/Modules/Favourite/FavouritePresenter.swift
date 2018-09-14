@@ -19,7 +19,7 @@ class FavouritePresenter: FavouritePresenterProtocol {
         
     }
     
-    func goToFavouriteDetail() {
+    func goToVideoDetail() {
         wireframe?.pushVideoDetail(view: view!)
     }
 }
