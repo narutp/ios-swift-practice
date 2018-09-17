@@ -28,11 +28,11 @@ class FavouriteView: UIViewController {
         videoDetailBtn.backgroundColor = .blue
         videoDetailBtn.tintColor = .white
         
-        someText.text = "Some text....."
+        someText.text = "Some text..."
         
         // LAYOUT
-//        videoDetailBtn.autoCenterInSuperview()
-        videoDetailBtn.autoAlignAxis(toSuperviewAxis: .vertical)
+        videoDetailBtn.autoCenterInSuperview()
+//        videoDetailBtn.autoAlignAxis(toSuperviewAxis: .vertical)
         
         someText.autoPinEdge(.top, to: .bottom, of: videoDetailBtn, withOffset: 20)
         someText.autoAlignAxis(toSuperviewAxis: .vertical)
