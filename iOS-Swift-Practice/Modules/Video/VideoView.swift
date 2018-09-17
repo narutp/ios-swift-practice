@@ -12,6 +12,7 @@ import PureLayout
 class VideoView: UIViewController {
     
     var presenter: VideoPresenterProtocol?
+//    private let container = UIView()
     private let videoDetailBtn = UIButton(type: .system)
     private let videoDetailTxt = UILabel()
     
@@ -21,21 +22,30 @@ class VideoView: UIViewController {
         view.backgroundColor = UIColor.white
         navigationItem.title = "Videos"
         
-        view.addSubview(videoDetailTxt)
-        view.addSubview(videoDetailBtn)
+//        self.view.addSubview(container)
+//        container.addSubview(videoDetailTxt)
+//        container.addSubview(videoDetailBtn)
+        self.view.addSubview(videoDetailTxt)
+        self.view.addSubview(videoDetailBtn)
         
         // SETUP Text
         videoDetailTxt.text = "This is label"
         
         // SETUP Button
         videoDetailBtn.setTitle("Detail", for: .normal)
+        videoDetailBtn.backgroundColor = .blue
+        videoDetailBtn.tintColor = .white
         
         // LAYOUT
 //        videoDetailTxt.autoPinEdge(toSuperViewEdge: .top)
-        
+//        container.autoCenterInSuperview()
+//        container.autoPinEdge(toSuperviewEdge: .left)
+//        container.autoPinEdge(toSuperviewEdge: .right)
         videoDetailTxt.autoCenterInSuperview()
+        videoDetailTxt.autoPinEdge(toSuperviewEdge: .top)
         videoDetailTxt.autoPinEdge(toSuperviewEdge: .left)
         videoDetailTxt.autoPinEdge(toSuperviewEdge: .right)
+        videoDetailTxt.autoMatch(.width, to: .height, of: videoDetailTxt)
         videoDetailTxt.autoAlignAxis(toSuperviewAxis: .vertical)
         
         videoDetailBtn.autoPinEdge(.top, to: .bottom, of: videoDetailTxt, withOffset: 20)
