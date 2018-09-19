@@ -11,7 +11,7 @@ import UIKit
 class VideoDetailView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tableView = UITableView()
-    var tableData = ["Ant", "Bat", "Cat", "Dog"]
+    var tableData = ["Ant", "Bat", "Cat", "Dog", "Ant", "Bat", "Cat", "Dog", "Ant", "Bat", "Cat", "Dog", "Ant", "Bat", "Cat", "Dog",]
     var presenter: VideoDetailPresenterProtocol?
     
     override func viewDidLoad() {
@@ -27,10 +27,12 @@ class VideoDetailView: UIViewController, UITableViewDataSource, UITableViewDeleg
         self.view.addSubview(tableView)
     }
     
+    //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
     
+    // Put value into the cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "my", for: indexPath)
         cell.textLabel?.text = "This is cell \(tableData[indexPath.row])"
