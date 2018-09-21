@@ -14,13 +14,14 @@ class FavouriteView: UIViewController {
     var presenter: FavouritePresenterProtocol?
     private let videoDetailBtn = UIButton(type: .system)
     private let someText = UILabel()
+    private var languageSheet = UIAlertController()
     private let videoDetailTxt = Localization.get("VideoDetail", alternate: "default label text")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         navigationItem.title = "Favourites"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(changeLanguage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localization.get("change-language", alternate: "Something"), style: .plain, target: self, action: #selector(changeLanguage))
         
         self.view.addSubview(videoDetailBtn)
         self.view.addSubview(someText)
@@ -35,14 +36,9 @@ class FavouriteView: UIViewController {
         
         // LAYOUT
         videoDetailBtn.autoCenterInSuperview()
-//        videoDetailBtn.autoAlignAxis(toSuperviewAxis: .vertical)
         
         someText.autoPinEdge(.top, to: .bottom, of: videoDetailBtn, withOffset: 20)
         someText.autoAlignAxis(toSuperviewAxis: .vertical)
-//        videoDetailBtn.autoMatch(.width, to: .height, of: videoDetailBtn)
-        
-//        videoDetailBtn.autoPinEdge(toSuperviewEdge: .left)
-//        videoDetailBtn.autoPinEdge(toSuperviewEdge: .right)
         
         // LISTENER
         videoDetailBtn.addTarget(self, action: #selector(clickVideoDetailBtn), for: .touchUpInside)
@@ -55,7 +51,18 @@ extension FavouriteView {
     }
     
     @objc func changeLanguage() {
-        print("in")
+        languageSheet = UIAlertController(title: Localization.get("change-language", alternate: "Change language"), message: "Something", preferredStyle: .actionSheet)
+        let thaiAction = UIAlertAction(title: "Thai", style: .default) { (action) in
+            Localization.setLanguage("th")
+        }
+        
+        let engAction = UIAlertAction(title: "English", style: .default) { (action) in
+            Localization.setLanguage("en")
+        }
+        
+        languageSheet.addAction(engAction)
+        languageSheet.addAction(thaiAction)
+        self.present(languageSheet, animated: true, completion: nil)
     }
 }
 

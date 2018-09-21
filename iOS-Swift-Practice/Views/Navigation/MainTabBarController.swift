@@ -16,9 +16,6 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(changeLanguage))
-        self.navigationItem.rightBarButtonItem  = button1
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(changeLanguage))
         self.tabBar.barTintColor = UIColor.clear
         self.initializeTab()
     }
