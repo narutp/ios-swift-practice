@@ -7,14 +7,20 @@
 //
 
 import UIKit
-
+import LocalizationKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // SETUP Localization
+        Localization.start(appKey: "1af45802-c64c-42e8-ab9d-bbe292eccbcc", live: true)
+//        Localization.liveEnabled = true
+        Localization.setLanguage("en")
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         self.showMainScreen()

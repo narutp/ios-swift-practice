@@ -347,13 +347,16 @@
 				TargetAttributes = {
 					6C6F3B2D2147994D00A26FB9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					6C6F3B412147995100A26FB9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 6C6F3B2D2147994D00A26FB9;
 					};
 					6C6F3B4C2147995100A26FB9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 6C6F3B2D2147994D00A26FB9;
 					};
 				};
@@ -467,11 +470,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-Swift-Practice/Pods-iOS-Swift-Practice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LocalizationKit/LocalizationKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LocalizationKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -729,7 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Swift-PracticeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Swift-Practice.app/iOS-Swift-Practice";
 			};
@@ -751,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Swift-PracticeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Swift-Practice.app/iOS-Swift-Practice";
 			};
@@ -772,7 +781,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Swift-PracticeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "iOS-Swift-Practice";
 			};
@@ -793,7 +802,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Swift-PracticeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "iOS-Swift-Practice";
 			};

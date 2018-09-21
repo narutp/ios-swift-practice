@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import LocalizationKit
 
 class FavouriteView: UIViewController {
 
     var presenter: FavouritePresenterProtocol?
     private let videoDetailBtn = UIButton(type: .system)
     private let someText = UILabel()
+    private let videoDetailTxt = Localization.get("VideoDetail", alternate: "default label text")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class FavouriteView: UIViewController {
         videoDetailBtn.backgroundColor = .blue
         videoDetailBtn.tintColor = .white
         
-        someText.text = "Some text..."
+        someText.text = videoDetailTxt
         
         // LAYOUT
         videoDetailBtn.autoCenterInSuperview()

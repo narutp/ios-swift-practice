@@ -5,7 +5,7 @@ target 'iOS-Swift-Practice' do
   use_frameworks!
 
 pod 'PureLayout'
-  # Pods for iOS-Swift-Practice
+pod 'LocalizationKit'
 
   target 'iOS-Swift-PracticeTests' do
     inherit! :search_paths

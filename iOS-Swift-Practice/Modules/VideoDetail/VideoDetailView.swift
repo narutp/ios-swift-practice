@@ -18,7 +18,7 @@ class VideoDetailView: UIViewController, UITableViewDataSource, UITableViewDeleg
         super.viewDidLoad()
         self.view.backgroundColor = .black
         
-        tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain)
+        tableView = UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .white
