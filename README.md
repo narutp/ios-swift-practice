@@ -1,3 +1,7 @@
 # ios-swift-practice
 
-## 1) pod install
+## Installation
+To run this application, clone repo and run 
+```
+pod install
+```
