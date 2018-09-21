@@ -8,6 +8,7 @@
 
 import UIKit
 import PureLayout
+import LocalizationKit
 
 class VideoView: UIViewController {
     
@@ -20,7 +21,7 @@ class VideoView: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
-        navigationItem.title = "Videos"
+        navigationItem.title = Localization.get("Navigation.video.title", alternate: "default")
         
 //        self.view.addSubview(container)
 //        container.addSubview(videoDetailTxt)

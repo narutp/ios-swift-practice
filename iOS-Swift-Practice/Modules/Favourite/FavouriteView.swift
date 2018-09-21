@@ -21,7 +21,7 @@ class FavouriteView: UIViewController {
         super.viewDidLoad()
         let videoDetailTxt = Localization.get("Video.Detail", alternate: "default label text")
         view.backgroundColor = UIColor.white
-        navigationItem.title = "Favourites"
+        navigationItem.title = Localization.get("Navigation.favourite.title", alternate: "default")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localization.get("Change.language", alternate: "Something"), style: .plain, target: self, action: #selector(changeLanguage))
         
         self.view.addSubview(videoDetailBtn)
