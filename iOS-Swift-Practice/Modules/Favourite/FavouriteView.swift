@@ -20,6 +20,7 @@ class FavouriteView: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         navigationItem.title = "Favourites"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(changeLanguage))
         
         self.view.addSubview(videoDetailBtn)
         self.view.addSubview(someText)
@@ -51,6 +52,10 @@ class FavouriteView: UIViewController {
 extension FavouriteView {
     @objc func clickVideoDetailBtn() {
         presenter?.goToVideoDetail()
+    }
+    
+    @objc func changeLanguage() {
+        print("in")
     }
 }
 

@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import LocalizationKit
 
 class MainTabBarController: UITabBarController {
 
-    let video = VideoWireframe.createVideoModule()
-    let favourite = FavouriteWireframe.createFavouriteModule()
+    private let video = VideoWireframe.createVideoModule()
+    private let favourite = FavouriteWireframe.createFavouriteModule()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(changeLanguage))
+        self.navigationItem.rightBarButtonItem  = button1
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(changeLanguage))
         self.tabBar.barTintColor = UIColor.clear
         self.initializeTab()
     }
@@ -36,6 +39,13 @@ class MainTabBarController: UITabBarController {
 //        for item in tabBar.items {
 //            item.imageInsets.....
 //        }
+        
+    }
+}
+
+extension MainTabBarController {
+    @objc func changeLanguage() {
+        print("IN")
     }
 }
 
