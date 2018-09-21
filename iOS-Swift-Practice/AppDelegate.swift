@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         // SETUP Localization
         Localization.start(appKey: "1af45802-c64c-42e8-ab9d-bbe292eccbcc", live: true)
-//        Localization.liveEnabled = true
+        Localization.liveEnabled = true
 //        Localization.resetToDeviceLanguage()
         Localization.setLanguage("en")
         

@@ -15,13 +15,14 @@ class FavouriteView: UIViewController {
     private let videoDetailBtn = UIButton(type: .system)
     private let someText = UILabel()
     private var languageSheet = UIAlertController()
-    private let videoDetailTxt = Localization.get("VideoDetail", alternate: "default label text")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let videoDetailTxt = Localization.get("Video.Detail", alternate: "default label text")
         view.backgroundColor = UIColor.white
         navigationItem.title = "Favourites"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localization.get("change-language", alternate: "Something"), style: .plain, target: self, action: #selector(changeLanguage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localization.get("Change.language", alternate: "Something"), style: .plain, target: self, action: #selector(changeLanguage))
         
         self.view.addSubview(videoDetailBtn)
         self.view.addSubview(someText)
@@ -51,7 +52,7 @@ extension FavouriteView {
     }
     
     @objc func changeLanguage() {
-        languageSheet = UIAlertController(title: Localization.get("change-language", alternate: "Change language"), message: "Something", preferredStyle: .actionSheet)
+        languageSheet = UIAlertController(title: Localization.get("Change.language", alternate: "Change language"), message: "Something", preferredStyle: .actionSheet)
         let thaiAction = UIAlertAction(title: "Thai", style: .default) { (action) in
             Localization.setLanguage("th")
         }
