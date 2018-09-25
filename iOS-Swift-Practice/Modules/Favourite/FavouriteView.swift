@@ -15,6 +15,7 @@ class FavouriteView: UIViewController {
     private let videoDetailBtn = UIButton(type: .system)
     private let someText = UILabel()
     private var languageSheet = UIAlertController()
+//    private let image = UIImage
     
     
     override func viewDidLoad() {
@@ -30,6 +31,7 @@ class FavouriteView: UIViewController {
         // SETUP UI
         videoDetailBtn.setTitle("Detail", for: .normal)
         videoDetailBtn.autoSetDimension(.height, toSize: 50)
+        videoDetailBtn.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
         videoDetailBtn.backgroundColor = .blue
         videoDetailBtn.tintColor = .white
         

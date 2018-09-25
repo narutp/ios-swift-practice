@@ -19,6 +19,12 @@
 		6C6F3B642147A41400A26FB9 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F3B632147A41400A26FB9 /* VideoView.swift */; };
 		6C6F3B672147A44900A26FB9 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F3B662147A44900A26FB9 /* FavouriteView.swift */; };
 		6C6F3B6C2147BD0300A26FB9 /* UITabBarController+viewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F3B6B2147BD0300A26FB9 /* UITabBarController+viewController.swift */; };
+		6C910965215AE9BC004DD836 /* FavouriteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C910964215AE9BC004DD836 /* FavouriteDetailView.swift */; };
+		6C910967215AE9CE004DD836 /* FavouriteDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C910966215AE9CE004DD836 /* FavouriteDetailProtocol.swift */; };
+		6C910969215AE9E0004DD836 /* FavouriteDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C910968215AE9E0004DD836 /* FavouriteDetailPresenter.swift */; };
+		6C91096B215AE9F1004DD836 /* FavouriteDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C91096A215AE9F1004DD836 /* FavouriteDetailInteractor.swift */; };
+		6C91096D215AEA04004DD836 /* FavouriteDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C91096C215AEA04004DD836 /* FavouriteDetailWireframe.swift */; };
+		6C910972215B02C2004DD836 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C910970215B02C2004DD836 /* Localizable.strings */; };
 		6C9CD63B214904940018F5F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63A214904940018F5F8 /* User.swift */; };
 		6C9CD63D214904CF0018F5F8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63C214904CF0018F5F8 /* UserProfile.swift */; };
 		6C9CD63F214A3BFA0018F5F8 /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63E214A3BFA0018F5F8 /* VideoDetailView.swift */; };
@@ -75,6 +81,15 @@
 		6C6F3B632147A41400A26FB9 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		6C6F3B662147A44900A26FB9 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		6C6F3B6B2147BD0300A26FB9 /* UITabBarController+viewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+viewController.swift"; sourceTree = "<group>"; };
+		6C910964215AE9BC004DD836 /* FavouriteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailView.swift; sourceTree = "<group>"; };
+		6C910966215AE9CE004DD836 /* FavouriteDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailProtocol.swift; sourceTree = "<group>"; };
+		6C910968215AE9E0004DD836 /* FavouriteDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailPresenter.swift; sourceTree = "<group>"; };
+		6C91096A215AE9F1004DD836 /* FavouriteDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailInteractor.swift; sourceTree = "<group>"; };
+		6C91096C215AEA04004DD836 /* FavouriteDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailWireframe.swift; sourceTree = "<group>"; };
+		6C91096E215B001B004DD836 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Main.strings; sourceTree = "<group>"; };
+		6C91096F215B001C004DD836 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6C910971215B02C2004DD836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "iOS-Swift-Practice/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6C910973215B0328004DD836 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = "iOS-Swift-Practice/th.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6C9CD63A214904940018F5F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6C9CD63C214904CF0018F5F8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		6C9CD63E214A3BFA0018F5F8 /* VideoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
@@ -151,6 +166,7 @@
 		6C6F3B252147994D00A26FB9 = {
 			isa = PBXGroup;
 			children = (
+				6C910970215B02C2004DD836 /* Localizable.strings */,
 				6C6F3B302147994D00A26FB9 /* iOS-Swift-Practice */,
 				6C6F3B452147995100A26FB9 /* iOS-Swift-PracticeTests */,
 				6C6F3B502147995100A26FB9 /* iOS-Swift-PracticeUITests */,
@@ -224,6 +240,7 @@
 		6C6F3B612147A3D500A26FB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6C910963215AE981004DD836 /* FavouriteDetail */,
 				6C9CD641214A5E120018F5F8 /* VideoDetail */,
 				6C6F3B652147A43300A26FB9 /* Favourite */,
 				6C6F3B622147A3EC00A26FB9 /* Video */,
@@ -261,6 +278,18 @@
 				6C6F3B6B2147BD0300A26FB9 /* UITabBarController+viewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6C910963215AE981004DD836 /* FavouriteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6C910966215AE9CE004DD836 /* FavouriteDetailProtocol.swift */,
+				6C910964215AE9BC004DD836 /* FavouriteDetailView.swift */,
+				6C910968215AE9E0004DD836 /* FavouriteDetailPresenter.swift */,
+				6C91096A215AE9F1004DD836 /* FavouriteDetailInteractor.swift */,
+				6C91096C215AEA04004DD836 /* FavouriteDetailWireframe.swift */,
+			);
+			path = FavouriteDetail;
 			sourceTree = "<group>";
 		};
 		6C9CD641214A5E120018F5F8 /* VideoDetail */ = {
@@ -368,6 +397,7 @@
 			knownRegions = (
 				en,
 				Base,
+				th,
 			);
 			mainGroup = 6C6F3B252147994D00A26FB9;
 			productRefGroup = 6C6F3B2F2147994D00A26FB9 /* Products */;
@@ -387,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C6F3B3C2147995100A26FB9 /* LaunchScreen.storyboard in Resources */,
+				6C910972215B02C2004DD836 /* Localizable.strings in Resources */,
 				6C6F3B392147995100A26FB9 /* Assets.xcassets in Resources */,
 				6C6F3B372147994D00A26FB9 /* Main.storyboard in Resources */,
 			);
@@ -501,18 +532,23 @@
 				6C9CD64E214A67E30018F5F8 /* VideoPresenter.swift in Sources */,
 				6C6F3B342147994D00A26FB9 /* MainTabBarController.swift in Sources */,
 				6C9CD63D214904CF0018F5F8 /* UserProfile.swift in Sources */,
+				6C910969215AE9E0004DD836 /* FavouriteDetailPresenter.swift in Sources */,
 				6C9CD63B214904940018F5F8 /* User.swift in Sources */,
 				6C6F3B322147994D00A26FB9 /* AppDelegate.swift in Sources */,
 				6C9CD652214A68060018F5F8 /* VideoWireframe.swift in Sources */,
 				6C6F3B642147A41400A26FB9 /* VideoView.swift in Sources */,
 				6C9CD64C214A67B70018F5F8 /* VideoProtocol.swift in Sources */,
+				6C91096B215AE9F1004DD836 /* FavouriteDetailInteractor.swift in Sources */,
 				6C9CD63F214A3BFA0018F5F8 /* VideoDetailView.swift in Sources */,
 				6C9CD658214B8FC50018F5F8 /* FavouriteInteractor.swift in Sources */,
 				6C6F3B6C2147BD0300A26FB9 /* UITabBarController+viewController.swift in Sources */,
+				6C910965215AE9BC004DD836 /* FavouriteDetailView.swift in Sources */,
 				6C9CD647214A5EE20018F5F8 /* VideoDetailWireframe.swift in Sources */,
+				6C91096D215AEA04004DD836 /* FavouriteDetailWireframe.swift in Sources */,
 				6C9CD643214A5E490018F5F8 /* VideoDetailProtocol.swift in Sources */,
 				6C9CD656214B8FA90018F5F8 /* FavouritePresenter.swift in Sources */,
 				6C9CD65A214B8FD50018F5F8 /* FavourtieWireframe.swift in Sources */,
+				6C910967215AE9CE004DD836 /* FavouriteDetailProtocol.swift in Sources */,
 				6C9CD649214A5F430018F5F8 /* VideoDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +589,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C6F3B362147994D00A26FB9 /* Base */,
+				6C91096E215B001B004DD836 /* th */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -561,8 +598,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C6F3B3B2147995100A26FB9 /* Base */,
+				6C91096F215B001C004DD836 /* th */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6C910970215B02C2004DD836 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C910971215B02C2004DD836 /* Base */,
+				6C910973215B0328004DD836 /* th */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -572,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -632,6 +680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
