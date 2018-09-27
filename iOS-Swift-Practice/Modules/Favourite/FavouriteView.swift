@@ -22,7 +22,7 @@ class FavouriteView: UIViewController {
         super.viewDidLoad()
         let videoDetailTxt = Localization.get("Video.Detail", alternate: "default label text")
         view.backgroundColor = UIColor.white
-        navigationItem.title = Localization.get("Navigation.favourite.title", alternate: "default")
+        navigationItem.title = NSLocalizedString("Favourite title", comment: "")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localization.get("Change.language", alternate: "Something"), style: .plain, target: self, action: #selector(changeLanguage))
         
         self.view.addSubview(videoDetailBtn)
@@ -60,7 +60,9 @@ extension FavouriteView {
         }
         
         let engAction = UIAlertAction(title: "English", style: .default) { (action) in
-            Localization.setLanguage("en")
+//            Localization.setLanguage("en")
+            UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
+            UserDefaults.standard.synchronize()
         }
         
         languageSheet.addAction(engAction)

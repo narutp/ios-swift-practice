@@ -25,6 +25,7 @@
 		6C91096B215AE9F1004DD836 /* FavouriteDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C91096A215AE9F1004DD836 /* FavouriteDetailInteractor.swift */; };
 		6C91096D215AEA04004DD836 /* FavouriteDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C91096C215AEA04004DD836 /* FavouriteDetailWireframe.swift */; };
 		6C910972215B02C2004DD836 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C910970215B02C2004DD836 /* Localizable.strings */; };
+		6C910977215CC52C004DD836 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C910976215CC52C004DD836 /* LoadingView.swift */; };
 		6C9CD63B214904940018F5F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63A214904940018F5F8 /* User.swift */; };
 		6C9CD63D214904CF0018F5F8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63C214904CF0018F5F8 /* UserProfile.swift */; };
 		6C9CD63F214A3BFA0018F5F8 /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD63E214A3BFA0018F5F8 /* VideoDetailView.swift */; };
@@ -90,6 +91,7 @@
 		6C91096F215B001C004DD836 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6C910971215B02C2004DD836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "iOS-Swift-Practice/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6C910973215B0328004DD836 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = "iOS-Swift-Practice/th.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6C910976215CC52C004DD836 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6C9CD63A214904940018F5F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6C9CD63C214904CF0018F5F8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		6C9CD63E214A3BFA0018F5F8 /* VideoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				6C9CD63C214904CF0018F5F8 /* UserProfile.swift */,
 				6C9CD63A214904940018F5F8 /* User.swift */,
 				6C6F3B6021479F4A00A26FB9 /* Navigation */,
+				6C910976215CC52C004DD836 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				6C9CD63B214904940018F5F8 /* User.swift in Sources */,
 				6C6F3B322147994D00A26FB9 /* AppDelegate.swift in Sources */,
 				6C9CD652214A68060018F5F8 /* VideoWireframe.swift in Sources */,
+				6C910977215CC52C004DD836 /* LoadingView.swift in Sources */,
 				6C6F3B642147A41400A26FB9 /* VideoView.swift in Sources */,
 				6C9CD64C214A67B70018F5F8 /* VideoProtocol.swift in Sources */,
 				6C91096B215AE9F1004DD836 /* FavouriteDetailInteractor.swift in Sources */,

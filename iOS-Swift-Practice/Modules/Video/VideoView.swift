@@ -21,11 +21,8 @@ class VideoView: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
-        navigationItem.title = Localization.get("Navigation.video.title", alternate: "default")
+        navigationItem.title = NSLocalizedString("Video title", comment: "")
         
-//        self.view.addSubview(container)
-//        container.addSubview(videoDetailTxt)
-//        container.addSubview(videoDetailBtn)
         self.view.addSubview(videoDetailTxt)
         self.view.addSubview(videoDetailBtn)
         
