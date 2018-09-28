@@ -15,6 +15,7 @@ class FavouriteView: UIViewController {
     private let videoDetailBtn = UIButton(type: .system)
     private let someText = UILabel()
     private var languageSheet = UIAlertController()
+    private let loadingView = LoadingView()
 //    private let image = UIImage
     
     
@@ -23,10 +24,16 @@ class FavouriteView: UIViewController {
         let videoDetailTxt = Localization.get("Video.Detail", alternate: "default label text")
         view.backgroundColor = UIColor.white
         navigationItem.title = NSLocalizedString("Favourite title", comment: "")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localization.get("Change.language", alternate: "Something"), style: .plain, target: self, action: #selector(changeLanguage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Language", style: .plain, target: self, action: #selector(changeLanguage))
         
         self.view.addSubview(videoDetailBtn)
         self.view.addSubview(someText)
+        self.view.addSubview(loadingView)
+        
+        loadingView.backgroundColor = .white
+        loadingView.autoPinEdgesToSuperviewEdges()
+        self.loadingView.isHidden = true
+        
         
         // SETUP UI
         videoDetailBtn.setTitle("Detail", for: .normal)
@@ -56,13 +63,23 @@ extension FavouriteView {
     @objc func changeLanguage() {
         languageSheet = UIAlertController(title: Localization.get("Change.language", alternate: "Change language"), message: "Something", preferredStyle: .actionSheet)
         let thaiAction = UIAlertAction(title: "Thai", style: .default) { (action) in
-            Localization.setLanguage("th")
+            self.loadingView.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                UserDefaults.standard.set(["th"], forKey: "AppleLanguages")
+                UserDefaults.standard.synchronize()
+                self.loadingView.isHidden = true
+            }
         }
         
         let engAction = UIAlertAction(title: "English", style: .default) { (action) in
 //            Localization.setLanguage("en")
-            UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
-            UserDefaults.standard.synchronize()
+            
+            self.loadingView.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
+                UserDefaults.standard.synchronize()
+                self.loadingView.isHidden = true
+            }
         }
         
         languageSheet.addAction(engAction)
