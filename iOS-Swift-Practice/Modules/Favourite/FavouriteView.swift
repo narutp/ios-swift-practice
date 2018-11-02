@@ -16,8 +16,6 @@ class FavouriteView: UIViewController {
     private let someText = UILabel()
     private var languageSheet = UIAlertController()
     private let loadingView = LoadingView()
-//    private let image = UIImage
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +23,7 @@ class FavouriteView: UIViewController {
         view.backgroundColor = UIColor.white
         navigationItem.title = NSLocalizedString("Favourite title", comment: "")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Language", style: .plain, target: self, action: #selector(changeLanguage))
-        
+
         self.view.addSubview(videoDetailBtn)
         self.view.addSubview(someText)
         self.view.addSubview(loadingView)
@@ -68,6 +66,7 @@ extension FavouriteView {
                 UserDefaults.standard.set(["th"], forKey: "AppleLanguages")
                 UserDefaults.standard.synchronize()
                 self.loadingView.isHidden = true
+                exit(0)
             }
         }
         
@@ -79,6 +78,7 @@ extension FavouriteView {
                 UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
                 UserDefaults.standard.synchronize()
                 self.loadingView.isHidden = true
+                exit(0)
             }
         }
         

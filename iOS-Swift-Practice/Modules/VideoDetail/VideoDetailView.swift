@@ -27,7 +27,6 @@ class VideoDetailView: UIViewController, UITableViewDataSource, UITableViewDeleg
         self.view.addSubview(tableView)
     }
     
-    //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }

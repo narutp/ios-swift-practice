@@ -6,6 +6,7 @@ target 'iOS-Swift-Practice' do
 
 pod 'PureLayout'
 pod 'LocalizationKit'
+pod 'ViewAnimator'
 
   target 'iOS-Swift-PracticeTests' do
     inherit! :search_paths

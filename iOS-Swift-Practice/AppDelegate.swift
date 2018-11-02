@@ -8,11 +8,13 @@
 
 import UIKit
 import LocalizationKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let options: UNAuthorizationOptions = [.alert, .sound]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
@@ -21,6 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Localization.liveEnabled = true
 //        Localization.resetToDeviceLanguage()
 //        Localization.setLanguage("en")
+        
+        let center = UNUserNotificationCenter.current()
+        
+        // Notification
+        // Request authorization from user
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("User not allow notification")
+            }
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Don't forget"
+        content.body = "Buy some milk"
+        content.sound = UNNotificationSound.default()
+
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 300, repeats: false)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()

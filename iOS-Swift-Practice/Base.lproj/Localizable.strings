@@ -6,5 +6,8 @@
   Copyright © 2561 Narut Poovorakit. All rights reserved.
 */
 
+// Video tab
 "Video title" = "Video";
+
+// Favourite tab
 "Favourite title" = "Favourite";

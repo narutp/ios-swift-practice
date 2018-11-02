@@ -35,10 +35,6 @@ class VideoView: UIViewController {
         videoDetailBtn.tintColor = .white
         
         // LAYOUT
-//        videoDetailTxt.autoPinEdge(toSuperViewEdge: .top)
-//        container.autoCenterInSuperview()
-//        container.autoPinEdge(toSuperviewEdge: .left)
-//        container.autoPinEdge(toSuperviewEdge: .right)
         videoDetailTxt.autoCenterInSuperview()
         videoDetailTxt.autoPinEdge(toSuperviewEdge: .top)
         videoDetailTxt.autoPinEdge(toSuperviewEdge: .left)
