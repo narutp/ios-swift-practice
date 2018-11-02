@@ -38,15 +38,24 @@ class VideoDetailView: UIViewController, UITableViewDataSource, UITableViewDeleg
         tableView.autoPinEdge(toSuperviewMargin: .bottom)
     }
     
-    @objc func animate() {
+    func animate() {
         let fromAnimation = AnimationType.from(direction: .left, offset: 30.0)
         let zoomAnimation = AnimationType.zoom(scale: 0.6)
         
-        UIView.animate(views: tableView.visibleCells, animations: [fromAnimation, zoomAnimation])
+        print("ins")
+        UIView.animate(views: tableView.visibleCells, animations: [fromAnimation, zoomAnimation], duration: 0.5)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.animate()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.animate()
     }
     
     // Put value into the cell
